@@ -23,17 +23,6 @@ class LoginResponsiveScreen extends StatelessWidget {
                     const Expanded(
                       child: IconImage()
                       ),
-                      Expanded(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
-                            SizedBox(
-                              width: 450,
-                              child: UsersInfo(),
-                            )
-                          ],
-                      )
-                    ),
                     Expanded(
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,

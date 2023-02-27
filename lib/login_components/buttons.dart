@@ -71,7 +71,7 @@ class _ButtonsLoginState extends State<ButtonsLogin> {
 
     
     return Scaffold(
-      backgroundColor: Color.fromARGB(0, 255, 206, 240),
+      backgroundColor: const Color.fromARGB(0, 255, 206, 240),
       resizeToAvoidBottomInset: false,
       body: Stack(
         children: [ Padding(
@@ -80,7 +80,6 @@ class _ButtonsLoginState extends State<ButtonsLogin> {
               alignment: Alignment.topCenter,
               children: [
                 Column(
-                  
                   mainAxisAlignment: MainAxisAlignment.center,
                   children:[
                 txtEmail,

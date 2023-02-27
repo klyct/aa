@@ -6,7 +6,7 @@ class Background extends StatelessWidget {
     Key? key,
     required this.child,
     this.topImage = "assets/f1.jpg",
-    this.bottomImage = "assets/l1.png",
+    this.bottomImage = "assets/f1.jpg",
   }) : super(key: key);
 
   final String topImage, bottomImage;
@@ -16,27 +16,12 @@ class Background extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Container(
-        width: double.infinity,
-        height: MediaQuery.of(context).size.height,
-        child: Stack(
-          alignment: Alignment.center,
-          children: <Widget>[
-            Positioned(
-              top: 0,
-              left: 0,
-              child: Image.asset(
-                topImage,
-                width: 120,
-              ),
-            ),
-            // Positioned(
-            //   bottom: 0,
-            //   right: 0,
-            //   child: Image.asset(bottomImage, width: 120),
-            // ),
-            SafeArea(child: child),
-          ],
-        ),
+        constraints: const BoxConstraints.expand(),
+          decoration: const BoxDecoration(
+            image: DecorationImage(image: AssetImage('assets/f1.jpg'),
+            fit: BoxFit.cover,
+            opacity: .5)
+          ),
       ),
     );
   }

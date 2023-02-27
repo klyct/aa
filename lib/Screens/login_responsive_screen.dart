@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 
 import '../login_components/buttons.dart';
 import '../login_components/icon_image.dart';
-import '../login_components/users_info.dart';
 
 class LoginResponsiveScreen extends StatelessWidget {
   const LoginResponsiveScreen({super.key});
@@ -19,6 +18,7 @@ class LoginResponsiveScreen extends StatelessWidget {
             children: [
               Expanded (
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Expanded(
                       child: IconImage()
@@ -39,6 +39,7 @@ class LoginResponsiveScreen extends StatelessWidget {
             )  
           ],
         )
-    ));
+      )
+    );
   }
 }

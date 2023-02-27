@@ -10,13 +10,14 @@ class IconImage extends StatelessWidget {
       body: Stack(
         children: [
           Container(
-            child: Stack(
-              alignment: Alignment.topCenter,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Positioned(
-                    top: 20,
+                    top: 50,
+                    right: 100,
                     child:  Image.asset('assets/l1.png',
-                            height: 200,)
+                            height: 250,)
                              )                                
               ],
             ),

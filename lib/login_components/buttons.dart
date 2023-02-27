@@ -75,9 +75,14 @@ class _ButtonsLoginState extends State<ButtonsLogin> {
       body: Stack(
         children: [
           Container(
+            child: Padding(
+              padding: const EdgeInsets.all(15.0),
             child: Stack(
               alignment: Alignment.topCenter,
               children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children:[
                 txtEmail,
                 spaceHorizontal,
                 txtPassword,
@@ -91,9 +96,11 @@ class _ButtonsLoginState extends State<ButtonsLogin> {
                 btnFacebook,
                 spaceHorizontal,
                 txtRegister
-              ],
+              ]
+              )
+            ],
             ),
-          ),
+          )),
           isLoading ? const LoadingModalWidget() : Container()
         ],
       ),

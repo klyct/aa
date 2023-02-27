@@ -14,6 +14,19 @@ class _ButtonsLoginState extends State<ButtonsLogin> {
   @override
   Widget build(BuildContext context) {
 
+    final txtEmail= TextFormField(
+      decoration:  const InputDecoration(
+        label: Text('Email User'), 
+        enabledBorder: OutlineInputBorder()),
+    );
+    
+    final txtPassword = TextFormField(
+    obscureText: true,
+    decoration:  const InputDecoration(
+      label: Text('Password'),
+      enabledBorder: OutlineInputBorder()),
+    );
+
 
     const spaceHorizontal = SizedBox(height: 10,);
 
@@ -65,6 +78,10 @@ class _ButtonsLoginState extends State<ButtonsLogin> {
             child: Stack(
               alignment: Alignment.topCenter,
               children: [
+                txtEmail,
+                spaceHorizontal,
+                txtPassword,
+                spaceHorizontal,
                 btnLogin,
                 spaceHorizontal,
                 const Text('or'),

@@ -1,5 +1,4 @@
 import 'package:aa/Screens/login_screen.dart';
-import 'package:aa/components/background.dart';
 import 'package:aa/responsive.dart';
 import 'package:flutter/material.dart';
 
@@ -11,10 +10,15 @@ class LoginResponsiveScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Background(child: 
-      Responsive(
+    return Responsive(
           mobile: const LoginScreen(), 
-          desktop: Row(
+          desktop: Container(
+            decoration: const BoxDecoration(
+            image: DecorationImage(image: AssetImage('assets/f1.jpg'),
+            fit: BoxFit.cover,
+            opacity: .5)
+          ),
+            child: Row(
             children: [
               Expanded (
                 child: Row(
@@ -39,7 +43,7 @@ class LoginResponsiveScreen extends StatelessWidget {
             )  
           ],
         )
-      )
+    )
     );
   }
 }

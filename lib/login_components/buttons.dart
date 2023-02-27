@@ -71,16 +71,16 @@ class _ButtonsLoginState extends State<ButtonsLogin> {
 
     
     return Scaffold(
+      backgroundColor: Color.fromARGB(0, 255, 206, 240),
       resizeToAvoidBottomInset: false,
       body: Stack(
-        children: [
-          Container(
-            child: Padding(
+        children: [ Padding(
               padding: const EdgeInsets.all(15.0),
             child: Stack(
               alignment: Alignment.topCenter,
               children: [
                 Column(
+                  
                   mainAxisAlignment: MainAxisAlignment.center,
                   children:[
                 txtEmail,
@@ -100,7 +100,7 @@ class _ButtonsLoginState extends State<ButtonsLogin> {
               )
             ],
             ),
-          )),
+          ),
           isLoading ? const LoadingModalWidget() : Container()
         ],
       ),

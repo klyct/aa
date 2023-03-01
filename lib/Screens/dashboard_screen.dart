@@ -1,3 +1,5 @@
+import 'package:aa/Screens/list_post_screen.dart';
+import 'package:aa/widgets/modal_add_posts.dart';
 import 'package:day_night_switcher/day_night_switcher.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -24,6 +26,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
       appBar: AppBar(
         title: const Text('SailorBook c:'),
         ),
+        body: const ListPostScreen(),
+        
+        floatingActionButton: FloatingActionButton.extended(
+          onPressed: _openCustomeDialog(),
+          icon: Icon(Icons.add), 
+          label: Text('Add Posts')),
         drawer: Drawer(
           child: ListView(
             children:  [
@@ -50,4 +58,26 @@ class _DashboardScreenState extends State<DashboardScreen> {
         ),
     );
   }
+
+  _openCustomeDialog(){
+      return showGeneralDialog(
+        context: context, 
+      barrierColor: Colors.black.withOpacity(.5),
+      transitionBuilder:(context, animation, secondaryAnimation, child) {
+        return Transform.scale(
+          scale: animation.value,
+          child: Opacity(opacity: animation.value,
+          child: ModalAddPost(),
+          ),
+        );
+      }, 
+      transitionDuration: Duration(milliseconds: 200),
+      barrierDismissible: true,
+      barrierLabel: '',
+      pageBuilder: (context,  animation,  secondaryAnimation) {
+        return Container();
+        },
+      );
+    }
+    
 }

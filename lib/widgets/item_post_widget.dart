@@ -10,8 +10,7 @@ class ItemPostWidget extends StatelessWidget {
 
     const iconMore = Icon(
       Icons.more_horiz, 
-      size: 35,)
-      ;
+      size: 35,);
 
     final carddesc = Container(
       color: const Color.fromARGB(255, 248, 138, 175),
@@ -29,8 +28,7 @@ class ItemPostWidget extends StatelessWidget {
     final ribbonTop = ClipRRect(
       borderRadius: const BorderRadius.only(
         topLeft: Radius.circular(10),
-        topRight: Radius.circular(10)
-      ),
+        topRight: Radius.circular(10)),
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 10),
         alignment: Alignment.centerRight,
@@ -74,7 +72,6 @@ class ItemPostWidget extends StatelessWidget {
         child: Column(
           children: [
             ribbonTop,
-            //const Divider(thickness: 2,),
             carddesc,
             //const Divider(thickness: 2,),
             ribbonBottom,

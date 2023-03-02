@@ -24,14 +24,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
     
     return Scaffold(
       appBar: AppBar(
-        title: const Text('SailorBook c:'),
-        ),
-        body: const ListPostScreen(),
-        
+        title: const Text('SailorBook c:'),),
+        body: const ListPostScreen(), 
         floatingActionButton: FloatingActionButton.extended(
-          onPressed: _openCustomeDialog(),
-          icon: Icon(Icons.add), 
-          label: Text('Add Posts')),
+          onPressed: _openCustomeDialog,
+          icon: const Icon(Icons.add_comment), 
+          label: const Text('Add Posts')),
         drawer: Drawer(
           child: ListView(
             children:  [
@@ -40,7 +38,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   backgroundImage: NetworkImage('https://www.nuevamujer.com/resizer/iSNbDz5vViNMSheTa2qE2tAu0GI=/800x0/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/metroworldnews/KX7LV6UAHBGRBDMR5WAHWA6FAQ.jpg') ,
                 ),
                 accountName: Text('Sailor moon'), 
-                accountEmail: Text('Moon prism power!')
+                accountEmail: Text('Moon_prism@power.com')
                 ),
                
                 DayNightSwitcher(
@@ -59,25 +57,27 @@ class _DashboardScreenState extends State<DashboardScreen> {
     );
   }
 
-  _openCustomeDialog(){
-      return showGeneralDialog(
-        context: context, 
+
+   _openCustomeDialog(){
+    return showGeneralDialog(
+      context: context, 
       barrierColor: Colors.black.withOpacity(.5),
-      transitionBuilder:(context, animation, secondaryAnimation, child) {
+      transitionBuilder: (context, animation, secondaryAnimation, child) {
         return Transform.scale(
           scale: animation.value,
-          child: Opacity(opacity: animation.value,
-          child: ModalAddPost(),
+          child: Opacity(
+            opacity: animation.value,
+            child: const ModalAddPost(),
           ),
         );
-      }, 
+      },
       transitionDuration: Duration(milliseconds: 200),
       barrierDismissible: true,
       barrierLabel: '',
-      pageBuilder: (context,  animation,  secondaryAnimation) {
+      pageBuilder: (context, animation, secondaryAnimation) {
         return Container();
-        },
-      );
-    }
-    
+      },
+    );
+  }
+
 }

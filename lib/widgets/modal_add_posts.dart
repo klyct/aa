@@ -12,9 +12,10 @@ class _ModalAddPostState extends State<ModalAddPost> {
   Widget build(BuildContext context) {
     return AlertDialog(
       title: Text('Adding Post'),
-      shape: OutlineInputBorder
-      (borderRadius: BorderRadius.circular(10)),
       content: TextFormField(),
+      shape: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(10)
+      ),
     );
   }
 }

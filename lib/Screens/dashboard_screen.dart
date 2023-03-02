@@ -61,7 +61,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
    _openCustomeDialog(){
     return showGeneralDialog(
       context: context, 
-      barrierColor: Colors.black.withOpacity(.5),
+      barrierColor: Colors.pink.withOpacity(.5),
       transitionBuilder: (context, animation, secondaryAnimation, child) {
         return Transform.scale(
           scale: animation.value,

@@ -1,5 +1,6 @@
 import 'package:aa/widgets/loading_modal_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:form_field_validator/form_field_validator.dart';
 import 'package:social_login_buttons/social_login_buttons.dart';
 
 class ButtonsLogin extends StatefulWidget {
@@ -14,36 +15,74 @@ class _ButtonsLoginState extends State<ButtonsLogin> {
   @override
   Widget build(BuildContext context) {
 
+  GlobalKey<FormState> formkey = GlobalKey<FormState>();
+  
+    String validatePassword(String value) {
+    if (value.isEmpty) {
+      return "* Required";
+    } else if (value.length < 6) {
+      return "Password should be atleast 6 characters";
+    } else if (value.length > 15) {
+      return "Password should not be greater than 15 characters";
+    } else
+      return "";
+  }
+
     final txtEmail= TextFormField(
-      decoration:  const InputDecoration(
-        label: Text('Email User'), 
-        enabledBorder: OutlineInputBorder()),
-    );
+      decoration: const InputDecoration(
+        labelText: 'Email',
+        enabledBorder: OutlineInputBorder(),
+        filled: true,
+        fillColor: Color.fromARGB(137, 252, 119, 152),
+        focusColor: Color.fromARGB(82, 252, 160, 183),
+        ),
+      style: const TextStyle(
+        color: Colors.white
+      ),
+      validator: MultiValidator([
+                      RequiredValidator(errorText: "* Required"),
+                      EmailValidator(errorText: "Enter valid email id"),
+                    ]));
     
     final txtPassword = TextFormField(
-    obscureText: true,
-    decoration:  const InputDecoration(
-      label: Text('Password'),
-      enabledBorder: OutlineInputBorder()),
-    );
-
+      obscureText: true,
+      decoration:  const InputDecoration(
+        label: Text('Create Password'),
+        enabledBorder: OutlineInputBorder(),
+        filled: true,
+        fillColor: Color.fromARGB(137, 252, 119, 152),
+        focusColor: Color.fromARGB(82, 252, 160, 183),
+      ),
+      style: const TextStyle(
+        color: Colors.white
+      ),
+      validator: MultiValidator([
+        RequiredValidator(errorText: "* Required"),
+        MinLengthValidator(6,
+          errorText: "Password should be atleast 6 characters"),
+        MaxLengthValidator(15,
+          errorText: "Password should not be greater than 15 characters")
+    ])
+  );
 
     const spaceHorizontal = SizedBox(height: 10,);
 
     final btnLogin = SocialLoginButton(
       buttonType: SocialLoginButtonType.generalLogin, 
       onPressed: (){
-        isLoading=true;
-        setState(() {
-          
+        if (formkey.currentState!.validate()) {
+          print("Validated");
+          isLoading=true;
+          setState(() { });
+           Future.delayed(const Duration(milliseconds: 3000)).then((value) {
+            isLoading=false;
+            setState(() {});
+            Navigator.pushNamed(context, '/dash');
         });
-        Future.delayed(const Duration(milliseconds: 3000)).then((value) {
-          isLoading=false;
-          setState(() {
-            
-          });
-          Navigator.pushNamed(context, '/dash');
-        });
+        } else {
+          print("Not Validated");
+        }
+        
        // showLoadingModal(context);
       } );
 
@@ -74,32 +113,35 @@ class _ButtonsLoginState extends State<ButtonsLogin> {
       backgroundColor: const Color.fromARGB(0, 255, 206, 240),
       resizeToAvoidBottomInset: false,
       body: Stack(
-        children: [ Padding(
-              padding: const EdgeInsets.all(15.0),
-            child: Stack(
-              alignment: Alignment.topCenter,
-              children: [
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children:[
-                txtEmail,
-                spaceHorizontal,
-                txtPassword,
-                spaceHorizontal,
-                btnLogin,
-                spaceHorizontal,
-                const Text('or'),
-                spaceHorizontal,
-                btnGoogle,
-                spaceHorizontal,
-                btnFacebook,
-                spaceHorizontal,
-                txtRegister
-              ]
-              )
-            ],
+        children: [ Form(
+          key: formkey,
+          child: Padding(
+                padding: const EdgeInsets.all(15.0),
+              child: Stack(
+                alignment: Alignment.topCenter,
+                children: [
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children:[
+                  txtEmail,
+                  spaceHorizontal,
+                  txtPassword,
+                  spaceHorizontal,
+                  btnLogin,
+                  spaceHorizontal,
+                  const Text('or'),
+                  spaceHorizontal,
+                  btnGoogle,
+                  spaceHorizontal,
+                  btnFacebook,
+                  spaceHorizontal,
+                  txtRegister
+                ]
+                )
+              ],
+              ),
             ),
-          ),
+        ),
           isLoading ? const LoadingModalWidget() : Container()
         ],
       ),

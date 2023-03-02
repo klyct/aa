@@ -218,7 +218,7 @@ class _RegiterFormScreenState extends State<RegiterFormScreen> {
                     CommonButtons(
                   backgroundColor: const Color.fromARGB(172, 240, 56, 185),
                   textColor: Colors.white,
-                  textLabel: 'Sing Up',
+                  textLabel: 'Sign Up',
                   onTap: () {
                     if (formkey.currentState!.validate()) {
                       Navigator.push(context,

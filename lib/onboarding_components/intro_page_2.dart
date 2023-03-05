@@ -11,7 +11,7 @@ class IntroPage2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Responsive(
       mobile: Container(
-        color: const Color.fromARGB(255, 255, 70, 126),
+        color: const Color.fromARGB(255, 160, 177, 204),
         child: Row(
           children: [
             Expanded(
@@ -28,7 +28,7 @@ class IntroPage2 extends StatelessWidget {
             ),
 
       desktop: Container(
-        color: const Color.fromARGB(255, 255, 70, 126),
+        color: const Color.fromARGB(255, 160, 177, 204),
         child: Row(
           children: [
             Expanded(

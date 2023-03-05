@@ -13,9 +13,20 @@ class Content1 extends StatelessWidget {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
-                    Center(
-                      child: Text('Moon Prism Power Make Up!')
-                      ),
+                    Center(child: 
+                    Text('Moon prism power',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontFamily:'DancingScript',
+                      fontSize: 40
+                    ),)),
+                    Center(child: 
+                    Text('Make up!',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontFamily:'DancingScript',
+                      fontSize: 60
+                    ),)),
                   ],
                 )
               ],

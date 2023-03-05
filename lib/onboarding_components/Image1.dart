@@ -9,7 +9,7 @@ class Page1Image extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset('assets/serena.png',
-          height: 280,
+          height: 350,
           alignment: Alignment.center,)                                
         ],
       );

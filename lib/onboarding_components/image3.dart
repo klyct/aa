@@ -8,7 +8,8 @@ class Page3Image extends StatelessWidget {
     return Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset('assets/loading1.gif',
+          Image.asset('assets/serena.png',
+          //sailor_moon.webp
           height: 280,
           alignment: Alignment.center,)                                
         ],

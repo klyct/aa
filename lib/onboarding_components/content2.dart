@@ -12,8 +12,15 @@ class Content2 extends StatelessWidget {
               children: [
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Center(child: Text('Moon Prism Power')),
+                  children: const[
+                    Center(child: 
+                    Text('La Bella Guardiana del Amor y Justicia en traje de marinera, Sailor moon!',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontFamily:'DancingScript',
+                      fontSize: 20
+                    ),)
+                    ),
                   ],
                 )
               ],

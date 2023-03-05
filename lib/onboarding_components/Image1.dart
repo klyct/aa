@@ -8,7 +8,7 @@ class Page1Image extends StatelessWidget {
     return Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset('assets/makeup.png',
+          Image.asset('assets/serena.png',
           height: 280,
           alignment: Alignment.center,)                                
         ],

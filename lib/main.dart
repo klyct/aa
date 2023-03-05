@@ -1,9 +1,11 @@
+import 'package:aa/Screens/onboarding_screen.dart';
 import 'package:aa/provider/theme_provider.dart';
 import 'package:aa/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import 'Screens/onboarding_screen.dart';
+
+import 'Screens/onboarding_screen1.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -32,7 +34,7 @@ class  aaApp extends StatelessWidget {
     return MaterialApp (
         theme: theme.getthemeData(),
         routes: getApplicationRoutes(),
-        home: OnboardingPage(),
+        home: OnBoardingScreen(),
       );
   }
 }

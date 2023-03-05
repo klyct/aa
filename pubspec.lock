@@ -81,14 +81,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.17.1"
-  concentric_transition:
-    dependency: "direct main"
-    description:
-      name: concentric_transition
-      sha256: "825191221e4bc6a0cfaf00adbc5cd2cc1333970f61311bce52021f1f68e0a891"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.3"
   convert:
     dependency: transitive
     description:
@@ -485,6 +477,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.99"
+  smooth_page_indicator:
+    dependency: "direct main"
+    description:
+      name: smooth_page_indicator
+      sha256: "8c301bc686892306cd41672c1880167f140c16be305d5ede8201fefd9fcda829"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.1"
   social_login_buttons:
     dependency: "direct main"
     description:

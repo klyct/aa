@@ -14,31 +14,7 @@ class Content3 extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const[
                     Center(child: 
-                    Text('Soy Sailor moon',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontFamily:'DancingScript',
-                      fontSize: 45
-                    ),)),
-
-                    Center(child: 
-                    Text('campeona de la justicia!',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontFamily:'DancingScript',
-                      fontSize: 35
-                    ),)),
-
-                    Center(child: 
-                    Text('En nombre de la luna, ',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontFamily:'DancingScript',
-                      fontSize: 35
-                    ),)),
-
-                    Center(child: 
-                    Text('corregiré los errores y',
+                    Text('Soy Sailor Moon,',
                     style: TextStyle(
                       color: Colors.white,
                       fontFamily:'DancingScript',
@@ -46,7 +22,23 @@ class Content3 extends StatelessWidget {
                     ),)),
 
                     Center(child: 
-                    Text('triunfaré sobre el mal.',
+                    Text('campeona de la justicia! ',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontFamily:'DancingScript',
+                      fontSize: 30
+                    ),)),
+
+                    Center(child: 
+                    Text('En nombre de la luna, corregiré los errores',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontFamily:'DancingScript',
+                      fontSize: 30
+                    ),)),
+
+                    Center(child: 
+                    Text('y triunfaré sobre el mal.',
                     style: TextStyle(
                       color: Colors.white,
                       fontFamily:'DancingScript',

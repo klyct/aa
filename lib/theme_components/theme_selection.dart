@@ -44,7 +44,7 @@ class _ThemeSelection extends State<ThemeSelection> {
                       });
                       themecontroller.temaClaro();
                     },
-                    title: Text('tema claro'),
+                    title: const Text('Light Theme'),
                   ),
                   RadioListTile(
                     value: 2,
@@ -55,7 +55,8 @@ class _ThemeSelection extends State<ThemeSelection> {
                       });
                       themecontroller.temaOscuro();
                     },
-                    title: Text('tema obscuro'),
+                    title: const Text('Dark Theme'),
+
                   ),
                   RadioListTile(
                     value: 3,
@@ -66,7 +67,7 @@ class _ThemeSelection extends State<ThemeSelection> {
                       });
                       themecontroller.temaPersonalizado(context);
                     },
-                    title: Text('tema Personalizado'),
+                    title: const Text('Moon Theme'),
                   ),
                 ],
               ),

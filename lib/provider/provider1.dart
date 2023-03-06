@@ -17,7 +17,7 @@ class Tema extends GetxController {
             primary: Color.fromARGB(255, 255, 0, 106),
             onPrimary: Colors.white,
             background: Color.fromARGB(255, 0, 0, 0),
-            onBackground: Color.fromARGB(255, 255, 255, 255),
+            onBackground: Colors.black,
             secondary: Color.fromARGB(255, 251, 212, 161),
             onSecondary: Colors.white,
             onPrimaryContainer: Color.fromARGB(255, 243, 203, 208)

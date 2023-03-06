@@ -1,82 +1,77 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:provider/provider.dart';
+import '../provider/provider1.dart';
 import '../provider/theme_provider.dart';
-import '../settings/styles.dart';
 
 class ThemeSelection extends StatefulWidget {
-  const ThemeSelection({super.key});
+  const ThemeSelection({Key? key}) : super(key: key);
 
   @override
-  State<ThemeSelection> createState() => _ThemeSelectionState();
+  _ThemeSelection createState() => _ThemeSelection();
 }
 
-class _ThemeSelectionState extends State<ThemeSelection> {
+class _ThemeSelection extends State<ThemeSelection> {
+  int _value = 3;
 
   @override
   Widget build(BuildContext context) {
+    const double _containerWidth = 450.0;
+    final themecontroller = Get.put(Tema());
     ThemeProvider theme = Provider.of<ThemeProvider>(context);
     return Scaffold(
-      backgroundColor: Color.fromARGB(0, 255, 206, 240),
-      resizeToAvoidBottomInset: false,
-      body: Stack(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                       Center(child: 
-                      GestureDetector(
-                        child:const Text('Light Theme',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 25
-                        ),),
-                        onTap: () {
-                          theme.setthemeData(StylesApp.lightTheme(context));
-                          setState(() {
-                            
-                          });
-                        },
-                      ),
-                      ),
-                      const SizedBox(height: 20,),
-                      Center(child: 
-                      GestureDetector(
-                        child: const Text('Dark Theme',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 25
-                        ),
-                        ),
-                        onTap: () {
-                          theme.setthemeData(StylesApp.darkTheme(context));
-                          setState(() {
-                            
-                          });
-                        },
-                      )),
-                      const SizedBox(height: 20,),                
-                       GestureDetector(
-                         child: const Center(child: Text('Moon Theme',
-                                             style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 25
-                          ),
-                          )
-                          ),
-                          onTap: () {
-                            theme.setthemeData(StylesApp.moonTheme(context));
-                            setState(() {
-                              
-                            });
-                        },
-                       ),
-                    ],
-                  ),
-                )
-              ],
+        body: Column(
+          children: [
+            Text(
+              "Temas",
+              style: TextStyle(
+                  color: Theme.of(context).colorScheme.onBackground,
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold),
             ),
-    );
+            SizedBox(
+              width: 750,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  RadioListTile(
+                    value: 1,
+                    groupValue: _value,
+                    onChanged: (val) {
+                      setState(() {
+                        _value = val!;
+                      });
+                      themecontroller.temaClaro();
+                    },
+                    title: Text('tema claro'),
+                  ),
+                  RadioListTile(
+                    value: 2,
+                    groupValue: _value,
+                    onChanged: (val) {
+                      setState(() {
+                        _value = val!;
+                      });
+                      themecontroller.temaOscuro();
+                    },
+                    title: Text('tema obscuro'),
+                  ),
+                  RadioListTile(
+                    value: 3,
+                    groupValue: _value,
+                    onChanged: (val) {
+                      setState(() {
+                        _value = val!;
+                      });
+                      themecontroller.temaPersonalizado(context);
+                    },
+                    title: Text('tema Personalizado'),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ));
   }
 }

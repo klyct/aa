@@ -1,3 +1,4 @@
+import 'package:aa/Screens/theme_screen.dart';
 import 'package:aa/widgets/loading_modal_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
@@ -110,6 +111,22 @@ bool isLoading = false;
     );
 
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Login'),
+        actions: <Widget>[
+    IconButton(
+      icon: const Icon(
+        Icons.settings,
+        color: Colors.white,
+      ),
+      onPressed: () {
+        Navigator.push(context, 
+                  MaterialPageRoute(builder: (context){
+                    return const ThemeScreen();
+                  }));
+      },
+    )
+  ],),
       resizeToAvoidBottomInset: false,
      body: Form(
       key: formkey,

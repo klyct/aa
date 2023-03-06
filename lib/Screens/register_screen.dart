@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:aa/Screens/dashboard_screen.dart';
 import 'package:aa/Screens/select_photo_options_screen.dart';
+import 'package:aa/Screens/theme_screen.dart';
 import 'package:aa/widgets/common_buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -137,6 +138,20 @@ class _RegiterFormScreenState extends State<RegiterFormScreen> {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: const Text("Sing up"),
+        actions: <Widget>[
+    IconButton(
+      icon: const Icon(
+        Icons.settings,
+        color: Colors.white,
+      ),
+      onPressed: () {
+        Navigator.push(context, 
+                  MaterialPageRoute(builder: (context){
+                    return const ThemeScreen();
+                  }));
+      },
+    )
+  ],
       ),
       body: SingleChildScrollView(
         

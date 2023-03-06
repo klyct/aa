@@ -3,6 +3,7 @@ import 'package:aa/provider/theme_provider.dart';
 import 'package:aa/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 Future<void> main() async{
@@ -29,7 +30,7 @@ class  aaApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
         ThemeProvider theme = Provider.of<ThemeProvider>(context);
-    return MaterialApp (
+    return GetMaterialApp (
         theme: theme.getthemeData(),
         routes: getApplicationRoutes(),
         home: const OnBoardingScreen(),

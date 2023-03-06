@@ -13,6 +13,7 @@ class LoginResponsiveScreen extends StatelessWidget {
     return Responsive(
           mobile: const LoginScreen(), 
           desktop: Container(
+            
             decoration: const BoxDecoration(
             image: DecorationImage(image: AssetImage('assets/f1.jpg'),
             fit: BoxFit.cover,

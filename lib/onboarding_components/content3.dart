@@ -11,7 +11,7 @@ class Content3 extends StatelessWidget {
       body: Stack(
               children: [
                 Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: const[
                     Center(child: 
                     Text('Soy Sailor Moon,',

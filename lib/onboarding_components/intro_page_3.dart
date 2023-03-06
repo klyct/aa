@@ -11,7 +11,7 @@ class IntroPage3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Responsive(
       mobile: Container(
-        color: const Color.fromARGB(255, 236, 0, 177),
+        color: Color.fromARGB(255, 244, 162, 255),
         child: Row(
           children: [
             Expanded(

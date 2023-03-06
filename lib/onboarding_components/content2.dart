@@ -12,9 +12,8 @@ class Content2 extends StatelessWidget {
       body: Stack(
               children: [
                 Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: const [
-                    //Expanded(child: Lottie.asset('assets/animation/89151-stars.json',fit: BoxFit.fitWidth),),
                      Center(child: 
                     Text('La Bella Guardiana del Amor',
                     style: TextStyle(

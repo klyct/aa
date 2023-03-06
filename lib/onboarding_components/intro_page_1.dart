@@ -46,9 +46,9 @@ class _IntroPage1State extends State<IntroPage1> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Expanded(child: Page1Image()),
+                        Expanded(child: Lottie.asset('assets/animation/55818-its-sleeptime.json',fit: BoxFit.fill),),
+                        //const Expanded(child: Page1Image()),
                         const Expanded(child: Content1()),
-                        Expanded(child: Lottie.asset('assets/animation/55818-its-sleeptime.json',fit: BoxFit.fill),)
                       ],
                     ),
                   ),

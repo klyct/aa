@@ -17,7 +17,7 @@ class _Content1State extends State<Content1> {
       body: Stack(
               children: [
                 Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children:  const [
                     Center(child: 
                     Text('Moon prism power',

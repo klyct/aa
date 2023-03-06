@@ -12,7 +12,7 @@ class Content2 extends StatelessWidget {
       body: Stack(
               children: [
                 Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
                      Center(child: 
                     Text('La Bella Guardiana del Amor',

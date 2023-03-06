@@ -18,10 +18,11 @@ class IntroPage2 extends StatelessWidget {
             Expanded(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children:const [
-                         Expanded(child: Page2Image()),
-                        //Expanded(child: Lottie.asset('assets/animation/89151-stars.json',fit: BoxFit.fill),),
-                         Expanded(child: Content2())
+                      children:[
+                        const Expanded(child: Page2Image()),
+                        const Expanded(child: Content2()),
+                        Expanded(child: Lottie.asset('assets/animation/74927-clear-night-moon.json',fit: BoxFit.fill),),
+                       
                       ],
                     ),
                   ),
@@ -36,10 +37,11 @@ class IntroPage2 extends StatelessWidget {
             Expanded(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children:  const [
-                        Expanded(child: Page2Image()),
-                        //Expanded(child: Lottie.asset('assets/animation/89151-stars.json',fit: BoxFit.fill),),
-                        Expanded(child: Content2())
+                      children: [
+                        const Expanded(child: Page2Image()),
+                        const Expanded(child: Content2()),
+                        Expanded(child: Lottie.asset('assets/animation/74927-clear-night-moon.json',fit: BoxFit.fill),),
+                       
                       ],
                     ),
                   ),

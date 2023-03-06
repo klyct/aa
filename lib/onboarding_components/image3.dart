@@ -9,7 +9,7 @@ class Page3Image extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset('assets/smoon.png',
-          height: 350,
+          height: 250,
           alignment: Alignment.center,)                                
         ],
       );

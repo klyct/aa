@@ -1,6 +1,5 @@
 import 'package:aa/settings/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class ThemeProvider with ChangeNotifier{
 
@@ -9,14 +8,11 @@ class ThemeProvider with ChangeNotifier{
   }
 
   ThemeData? _themeData;
-  
+
   getthemeData()=> _themeData;
 
-  setthemeData(ThemeData theme) async {
+  setthemeData(ThemeData theme) {
     _themeData = theme;
-    SharedPreferences prefs=await SharedPreferences.getInstance();
     notifyListeners();
   }
-  
-
 }

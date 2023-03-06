@@ -47,7 +47,7 @@ class _ButtonsLoginState extends State<ButtonsLogin> {
     final txtPassword = TextFormField(
       obscureText: true,
       decoration:  const InputDecoration(
-        label: Text('Create Password'),
+        label: Text('Password'),
         enabledBorder: OutlineInputBorder(),
         filled: true,
         fillColor: Color.fromARGB(137, 252, 119, 152),

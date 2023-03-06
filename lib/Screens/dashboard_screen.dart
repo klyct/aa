@@ -47,11 +47,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 isDarkModeEnabled: isDarkThemeEnable,
                 onStateChanged: ((isDarkModeEnabled) {
                   isDarkModeEnabled
-                      ? theme.setthemeData(StylesApp.lightTheme(context))
+                      ? )
                       : theme.setthemeData(StylesApp.darkTheme(context));
                   isDarkThemeEnable = isDarkModeEnabled;
                   setState(() {});
                 })) , */
+
                 CommonButtons(
                   textLabel: 'Select Theme', 
                   textColor: Colors.white, 
@@ -83,7 +84,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
           ),
         );
       },
-      transitionDuration: Duration(milliseconds: 200),
+      transitionDuration: const Duration(milliseconds: 200),
       barrierDismissible: true,
       barrierLabel: '',
       pageBuilder: (context, animation, secondaryAnimation) {

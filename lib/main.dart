@@ -3,12 +3,13 @@ import 'package:aa/provider/theme_provider.dart';
 import 'package:aa/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:provider/provider.dart';
-void main() {
+import 'package:shared_preferences/shared_preferences.dart';
+Future<void> main() async{
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-  runApp(const MyApp());
+  SharedPreferences prefs=await SharedPreferences.getInstance();
+  runApp( const MyApp());
 }
 class MyApp extends StatelessWidget {
     const MyApp({Key? key}) : super(key: key);
@@ -27,12 +28,11 @@ class  aaApp extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    
-    ThemeProvider theme = Provider.of<ThemeProvider>(context);
-    return GetMaterialApp (
+        ThemeProvider theme = Provider.of<ThemeProvider>(context);
+    return MaterialApp (
         theme: theme.getthemeData(),
         routes: getApplicationRoutes(),
-        home: OnBoardingScreen(),
+        home: const OnBoardingScreen(),
       );
   }
 }

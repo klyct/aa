@@ -16,7 +16,7 @@ class ThemeScreen extends StatelessWidget {
         
         mobile: Container(
           
-          color: const Color.fromARGB(255, 255, 255, 255),
+          color: const Color.fromARGB(0, 255, 255, 255),
           child: Row(
             children: [ Expanded(
               child: Column(

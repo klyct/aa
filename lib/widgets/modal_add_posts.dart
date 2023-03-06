@@ -11,7 +11,7 @@ class _ModalAddPostState extends State<ModalAddPost> {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: Text('Adding Post'),
+      title: const Text('Adding Post'),
       content: TextFormField(),
       shape: OutlineInputBorder(
         borderRadius: BorderRadius.circular(10)

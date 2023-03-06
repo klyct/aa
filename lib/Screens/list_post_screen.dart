@@ -35,9 +35,9 @@ class _ListPostScreenState extends State<ListPostScreen> {
             },
           );
         } else if (snapshot.hasError){
-          return  Center(child: Text('Chale mano no te funciono'),);
+          return  const Center(child: Text('Chale mano no te funciono'),);
         } else {
-          return  Center(child: CircularProgressIndicator(),);
+          return  const Center(child: CircularProgressIndicator(),);
         }
       },
     );

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:provider/provider.dart';
 import '../provider/theme_provider.dart';
-import '../settings/themes.dart';
+import '../settings/styles.dart';
 
 class ThemeSelection extends StatefulWidget {
   const ThemeSelection({super.key});
@@ -12,12 +12,11 @@ class ThemeSelection extends StatefulWidget {
 
 class _ThemeSelectionState extends State<ThemeSelection> {
 
-  final temaController = Get.put(TemaProvider());
-
   @override
   Widget build(BuildContext context) {
+    ThemeProvider theme = Provider.of<ThemeProvider>(context);
     return Scaffold(
-      backgroundColor: const Color.fromARGB(0, 255, 206, 240),
+      backgroundColor: Color.fromARGB(0, 255, 206, 240),
       resizeToAvoidBottomInset: false,
       body: Stack(
               children: [
@@ -34,7 +33,7 @@ class _ThemeSelectionState extends State<ThemeSelection> {
                           fontSize: 25
                         ),),
                         onTap: () {
-                          temaController.temaClaro();
+                          theme.setthemeData(StylesApp.lightTheme(context));
                           setState(() {
                             
                           });
@@ -51,7 +50,7 @@ class _ThemeSelectionState extends State<ThemeSelection> {
                         ),
                         ),
                         onTap: () {
-                          temaController.temaOscuro();
+                          theme.setthemeData(StylesApp.darkTheme(context));
                           setState(() {
                             
                           });
@@ -67,7 +66,7 @@ class _ThemeSelectionState extends State<ThemeSelection> {
                           )
                           ),
                           onTap: () {
-                            temaController.temaPersonalizado();
+                            theme.setthemeData(StylesApp.moonTheme(context));
                             setState(() {
                               
                             });

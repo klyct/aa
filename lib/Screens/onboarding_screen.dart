@@ -14,7 +14,7 @@ class OnBoardingScreen extends StatefulWidget {
 }
 
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
-  PageController _controller = PageController();
+  final PageController _controller = PageController();
   bool onLastPage=false;
   
   @override
@@ -41,7 +41,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               GestureDetector(
-                child: Text("Skip"),
+                child: const Text("Skip"),
                 onTap:() {
                   _controller.jumpToPage(2);
                 },),
@@ -51,18 +51,18 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 count: 3),
               onLastPage 
               ? GestureDetector(
-                child: Text("Done"),
+                child: const Text("Done"),
                 onTap: () {
                   Navigator.push(context, 
                   MaterialPageRoute(builder: (context){
-                    return LoginResponsiveScreen();
+                    return const LoginResponsiveScreen();
                   }));
                 },)
                 : GestureDetector(
-                child: Text("Next"),
+                child: const Text("Next"),
                 onTap: () {
                   _controller.nextPage(
-                    duration: Duration(milliseconds: 500), 
+                    duration: const Duration(milliseconds: 500), 
                     curve: Curves.easeIn);
                 },)
             ],

@@ -15,7 +15,6 @@ class ThemeScreen extends StatelessWidget {
       body: Responsive(
         
         mobile: Container(
-          
           color: const Color.fromARGB(0, 255, 255, 255),
           child: Row(
             children: [ Expanded(

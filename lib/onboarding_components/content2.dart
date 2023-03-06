@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class Content2 extends StatelessWidget {
   const Content2({super.key});
@@ -12,8 +13,9 @@ class Content2 extends StatelessWidget {
               children: [
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const[
-                    Center(child: 
+                  children: const [
+                    //Expanded(child: Lottie.asset('assets/animation/89151-stars.json',fit: BoxFit.fitWidth),),
+                     Center(child: 
                     Text('La Bella Guardiana del Amor',
                     style: TextStyle(
                       color: Colors.white,
@@ -21,7 +23,7 @@ class Content2 extends StatelessWidget {
                       fontSize: 45
                     ),)),
 
-                    Center(child: 
+                     Center(child: 
                     Text('y Justicia en traje de marinera!',
                     style: TextStyle(
                       color: Colors.white,

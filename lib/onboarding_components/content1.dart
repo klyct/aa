@@ -1,18 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
-class Content1 extends StatelessWidget {
+class Content1 extends StatefulWidget {
   const Content1({super.key});
 
+  @override
+  State<Content1> createState() => _Content1State();
+}
+
+class _Content1State extends State<Content1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(0, 255, 206, 240),
-      resizeToAvoidBottomInset: false,
+      resizeToAvoidBottomInset: true,
       body: Stack(
               children: [
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
+                  children:  const [
                     Center(child: 
                     Text('Moon prism power',
                     style: TextStyle(

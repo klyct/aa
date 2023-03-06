@@ -1,5 +1,6 @@
 import 'package:aa/responsive.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 import 'content2.dart';
 import 'image2.dart';
@@ -17,9 +18,10 @@ class IntroPage2 extends StatelessWidget {
             Expanded(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        Expanded(child: Page2Image()),
-                        Expanded(child: Content2())
+                      children:[
+                        const Expanded(child: Page2Image()),
+                        Expanded(child: Lottie.asset('assets/animation/89151-stars.json',fit: BoxFit.fill),),
+                        const Expanded(child: Content2())
                       ],
                     ),
                   ),
@@ -34,9 +36,10 @@ class IntroPage2 extends StatelessWidget {
             Expanded(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        Expanded(child: Page2Image()),
-                        Expanded(child: Content2())
+                      children:  [
+                        const Expanded(child: Page2Image()),
+                        Expanded(child: Lottie.asset('assets/animation/89151-stars.json',fit: BoxFit.fill),),
+                        const Expanded(child: Content2())
                       ],
                     ),
                   ),

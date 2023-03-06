@@ -1,4 +1,6 @@
 import 'package:aa/Screens/list_post_screen.dart';
+import 'package:aa/Screens/theme_screen.dart';
+import 'package:aa/widgets/common_buttons.dart';
 import 'package:aa/widgets/modal_add_posts.dart';
 import 'package:day_night_switcher/day_night_switcher.dart';
 import 'package:flutter/material.dart';
@@ -41,7 +43,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 accountEmail: Text('Moon_prism@power.com')
                 ),
                
-                DayNightSwitcher(
+                /*DayNightSwitcher(
                 isDarkModeEnabled: isDarkThemeEnable,
                 onStateChanged: ((isDarkModeEnabled) {
                   isDarkModeEnabled
@@ -49,7 +51,17 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       : theme.setthemeData(StylesApp.darkTheme(context));
                   isDarkThemeEnable = isDarkModeEnabled;
                   setState(() {});
-                }))  
+                })) , */
+                CommonButtons(
+                  textLabel: 'Select Theme', 
+                  textColor: Colors.white, 
+                  backgroundColor: Colors.black, 
+                  onTap: () {
+                  Navigator.push(context, 
+                  MaterialPageRoute(builder: (context){
+                    return const ThemeScreen();
+                  }));
+                },)
             ],
           ),
        

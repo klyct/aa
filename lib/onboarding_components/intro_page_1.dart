@@ -18,7 +18,7 @@ class _IntroPage1State extends State<IntroPage1> {
     return  Responsive(
       mobile: Container(
         decoration: const BoxDecoration(
-          color: Color.fromARGB(255, 255, 141, 160),
+          color: Color.fromARGB(255, 255, 209, 216),
           
         ),
         child: Row(
@@ -39,7 +39,7 @@ class _IntroPage1State extends State<IntroPage1> {
             ),
 
       desktop: Container(
-        color: const Color.fromARGB(255, 255, 141, 160),
+        color: const Color.fromARGB(255, 255, 209, 216),
         child: Row(
           children: [
             Expanded(

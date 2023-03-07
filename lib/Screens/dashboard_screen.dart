@@ -5,6 +5,7 @@ import 'package:aa/widgets/modal_add_posts.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../provider/flags_provider.dart';
 import '../provider/theme_provider.dart';
 
 class DashboardScreen extends StatefulWidget {
@@ -21,6 +22,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   Widget build(BuildContext context) {
 
     ThemeProvider theme = Provider.of<ThemeProvider>(context);
+    FlagsProvider flags = Provider.of<FlagsProvider>(context);
     
     return Scaffold(
       appBar: AppBar(
@@ -39,9 +41,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
       },
     )
   ],),
-        body: const ListPostScreen(), 
+        body: flags.getupdateposts()==true? ListPostScreen(): ListPostScreen(), 
         floatingActionButton: FloatingActionButton.extended(
-          onPressed: _openCustomeDialog,
+          onPressed: _openCustomeDialog ,
           icon: const Icon(Icons.add_comment), 
           label: const Text('Add Posts')),
         drawer: Drawer(
@@ -62,10 +64,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
   }
 
 
-   _openCustomeDialog(){
+   _openCustomeDialog() {
     return showGeneralDialog(
       context: context, 
-      barrierColor: Colors.pink.withOpacity(.5),
+      barrierColor: const Color.fromARGB(255, 255, 162, 193).withOpacity(.5),
       transitionBuilder: (context, animation, secondaryAnimation, child) {
         return Transform.scale(
           scale: animation.value,

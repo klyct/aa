@@ -1,4 +1,5 @@
 import 'package:aa/Screens/onboarding_screen.dart';
+import 'package:aa/provider/flags_provider.dart';
 import 'package:aa/provider/theme_provider.dart';
 import 'package:aa/routes.dart';
 import 'package:flutter/material.dart';
@@ -17,8 +18,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {  
-    return  ChangeNotifierProvider(
-      create: (context)=>ThemeProvider(context),
+    return  MultiProvider(
+      providers: [
+        ChangeNotifierProvider<ThemeProvider>(create: (context)=>ThemeProvider(context),),
+        ChangeNotifierProvider<FlagsProvider>(create: (context)=>FlagsProvider(),)
+      ],
+      //create: (context)=>ThemeProvider(context),
       child: aaApp()
     ); 
   }

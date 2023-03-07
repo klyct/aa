@@ -9,7 +9,7 @@ class Page2Image extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset('assets/sailor.jpg',
-          height: 250,
+          height: 200,
           alignment: Alignment.center,)                                
         ],
       );

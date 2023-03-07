@@ -164,7 +164,7 @@ bool isLoading = false;
                     Positioned(
                       top: 20,
                       child:  Image.asset('assets/l1.png',
-                              height: 200,)
+                              height: 150,)
                                )         
                                ],
                ),

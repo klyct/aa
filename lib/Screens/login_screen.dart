@@ -19,7 +19,7 @@ bool isLoading = false;
   Widget build(BuildContext context) {
   GlobalKey<FormState> formkey = GlobalKey<FormState>();
   
-    String validatePassword(String value) {
+    /*String validatePassword(String value) {
     if (value.isEmpty) {
       return "* Required";
     } else if (value.length < 6) {
@@ -28,7 +28,7 @@ bool isLoading = false;
       return "Password should not be greater than 15 characters";
     } else
       return "";
-  }
+  }*/
 
     final txtEmail= TextFormField(
       decoration: const InputDecoration(

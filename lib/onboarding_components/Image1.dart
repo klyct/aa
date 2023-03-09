@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
 
 class Page1Image extends StatelessWidget {
   const Page1Image({super.key});

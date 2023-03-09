@@ -24,13 +24,14 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<FlagsProvider>(create: (context)=>FlagsProvider(),)
       ],
       //create: (context)=>ThemeProvider(context),
-      child: aaApp()
+      child: const aaApp()
     ); 
   }
 }
 
+// ignore: camel_case_types
 class  aaApp extends StatelessWidget {
-    aaApp({super.key});
+    const aaApp({super.key});
   
   @override
   Widget build(BuildContext context) {

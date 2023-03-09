@@ -1,7 +1,7 @@
 import 'package:aa/database/database_helper.dart';
-import 'package:aa/provider/flags_provider.dart';
+//import 'package:aa/provider/flags_provider.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+//import 'package:provider/provider.dart';
 
 import '../model/post_model.dart';
 import '../widgets/item_post_widget.dart';

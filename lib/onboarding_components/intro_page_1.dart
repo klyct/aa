@@ -3,8 +3,6 @@ import 'package:aa/responsive.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-import 'Image1.dart';
-
 class IntroPage1 extends StatefulWidget {
   const IntroPage1({super.key});
 

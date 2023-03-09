@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:provider/provider.dart';
+//import 'package:provider/provider.dart';
 import '../provider/provider1.dart';
-import '../provider/theme_provider.dart';
+//import '../provider/theme_provider.dart';
 
 class ThemeSelection extends StatefulWidget {
   const ThemeSelection({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _ThemeSelection createState() => _ThemeSelection();
 }
 
@@ -18,7 +19,7 @@ class _ThemeSelection extends State<ThemeSelection> {
   Widget build(BuildContext context) {
     const double _containerWidth = 450.0;
     final themecontroller = Get.put(Tema());
-    ThemeProvider theme = Provider.of<ThemeProvider>(context);
+    //ThemeProvider theme = Provider.of<ThemeProvider>(context);
     return Scaffold(
         body: Column(
           children: [

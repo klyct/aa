@@ -5,7 +5,7 @@ class FlagsProvider with ChangeNotifier{
 
   getupdateposts()=> _updatePosts;
   setupdateposts(){
-    this._updatePosts = !this._updatePosts;
+    _updatePosts = !_updatePosts;
     notifyListeners();
   }
 }

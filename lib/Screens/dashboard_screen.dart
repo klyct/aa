@@ -1,12 +1,11 @@
 import 'package:aa/Screens/list_post_screen.dart';
 import 'package:aa/Screens/theme_screen.dart';
-import 'package:aa/widgets/common_buttons.dart';
 import 'package:aa/widgets/modal_add_posts.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../provider/flags_provider.dart';
-import '../provider/theme_provider.dart';
+//import '../provider/theme_provider.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -21,7 +20,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   @override
   Widget build(BuildContext context) {
 
-    ThemeProvider theme = Provider.of<ThemeProvider>(context);
+    //ThemeProvider theme = Provider.of<ThemeProvider>(context);
     FlagsProvider flags = Provider.of<FlagsProvider>(context);
     
     return Scaffold(
@@ -41,7 +40,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
       },
     )
   ],),
-        body: flags.getupdateposts()==true? ListPostScreen(): ListPostScreen(), 
+        body: flags.getupdateposts()==true? const ListPostScreen(): const ListPostScreen(), 
         floatingActionButton: FloatingActionButton.extended(
           onPressed: _openCustomeDialog ,
           icon: const Icon(Icons.add_comment), 

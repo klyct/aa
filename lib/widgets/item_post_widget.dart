@@ -1,6 +1,7 @@
 import 'package:aa/model/post_model.dart';
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class ItemPostWidget extends StatelessWidget {
    ItemPostWidget({super.key,this.postModel});
   PostModel? postModel;

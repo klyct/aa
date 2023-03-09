@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
 
 class Content1 extends StatefulWidget {
   const Content1({super.key});

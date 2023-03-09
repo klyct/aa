@@ -17,7 +17,7 @@ class _ButtonsLoginState extends State<ButtonsLogin> {
 
   GlobalKey<FormState> formkey = GlobalKey<FormState>();
   
-    String validatePassword(String value) {
+    /*String validatePassword(String value) {
     if (value.isEmpty) {
       return "* Required";
     } else if (value.length < 6) {
@@ -26,7 +26,7 @@ class _ButtonsLoginState extends State<ButtonsLogin> {
       return "Password should not be greater than 15 characters";
     } else
       return "";
-  }
+  }*/
 
     final txtEmail= TextFormField(
       decoration: const InputDecoration(

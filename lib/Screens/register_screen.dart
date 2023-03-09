@@ -14,6 +14,7 @@ class RegiterFormScreen extends StatefulWidget {
   static const id = 'set_photo_screen';
 
   @override
+   // ignore: library_private_types_in_public_api
    _RegiterFormScreenState createState() => _RegiterFormScreenState();
 }
 
@@ -29,8 +30,9 @@ class _RegiterFormScreenState extends State<RegiterFormScreen> {
       return "Password should be atleast 6 characters";
     } else if (value.length > 15) {
       return "Password should not be greater than 15 characters";
-    } else
+    } else {
       return "";
+    }
   }
 
   final txtEmail= TextFormField(
@@ -218,7 +220,7 @@ class _RegiterFormScreenState extends State<RegiterFormScreen> {
               ),
               spaceHorizontal,
               Center( child:
-               Container(
+               SizedBox(
                 height:200,
                 width: 250,
                 child: Column( 

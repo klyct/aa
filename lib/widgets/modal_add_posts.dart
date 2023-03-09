@@ -16,7 +16,8 @@ class _ModalAddPostState extends State<ModalAddPost> {
   DataBaseHelper?database;
 
   TextEditingController txtDescPost = TextEditingController();
-
+  
+  @override
   void initState(){
     super.initState();
     database = DataBaseHelper();
@@ -47,7 +48,7 @@ class _ModalAddPostState extends State<ModalAddPost> {
                 ScaffoldMessenger.of(context).showSnackBar(snackBar);
                 flags.setupdateposts();
               });
-            }, icon: Icon(Icons.add))
+            }, icon: const Icon(Icons.add))
           ],
         ),
       ),
